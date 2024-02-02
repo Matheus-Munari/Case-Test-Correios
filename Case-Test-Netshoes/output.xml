@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-01T14:04:49.920397" rpa="false" schemaversion="5">
+<suite id="s1" name="Preenchimento-Correto" source="c:\Users\v8\Desktop\caso-de-teste-kabum\testes\preenchimento-correto.robot">
+<test id="s1-t1" name="Verificar se ao preencher os campos corretamente no login se o usuário consegue logar" line="10">
+<kw name="Dado que eu acesse a Netshoes" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-01T14:04:50.232780" level="INFO">Opening browser 'Chrome' to base url 'https://www.netshoes.com.br'.</msg>
+<arg>url=https://www.netshoes.com.br</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-01T14:04:50.231778" elapsed="7.600020"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-01T14:04:57.832792" elapsed="0.133194"/>
+</kw>
+<status status="PASS" start="2024-02-01T14:04:50.229783" elapsed="7.737194"/>
+</kw>
+<kw name="Quando clicar em login" owner="navegacao">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-01T14:04:57.975520" level="INFO">Clicking element '//*[@id="header-user-anonymous"]/a'.</msg>
+<arg>${LISTA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T14:04:57.973519" elapsed="1.644600"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-01T14:05:00.620127" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-01T14:04:59.619654" elapsed="1.002529"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-01T14:05:00.626146" level="INFO">Clicking element '//*[@id="header-user-anonymous"]/ul/li[1]/a'.</msg>
+<arg>${BOTAO_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T14:05:00.624167" elapsed="6.445776"/>
+</kw>
+<status status="PASS" start="2024-02-01T14:04:57.970517" elapsed="9.099938"/>
+</kw>
+<kw name="E preencher o formulario de login" owner="login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-01T14:05:07.073533" level="INFO">Typing text 'matheusmunari0@gmail.com' into text field '//*[@id="user"]'.</msg>
+<arg>${INPUT_LOGIN}</arg>
+<arg>matheusmunari0@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T14:05:07.072469" elapsed="0.713547"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-01T14:05:07.787040" level="INFO">Typing password into text field '//*[@id="password"]'.</msg>
+<msg time="2024-02-01T14:05:07.865441" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${SENHA}</arg>
+<arg>nkc_lol1</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T14:05:07.786016" elapsed="0.221921"/>
+</kw>
+<status status="PASS" start="2024-02-01T14:05:07.071470" elapsed="0.936467"/>
+</kw>
+<kw name="E apertar o botao entrar" owner="login">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-01T14:05:08.010331" level="INFO">Clicking element 'id:Layer_1'.</msg>
+<arg>${ANUNCIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T14:05:08.008951" elapsed="0.127828"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-01T14:05:08.138291" level="INFO">Clicking element '//button[contains(@class,'btn btn--primary btn--block')]'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T14:05:08.136779" elapsed="0.127098"/>
+</kw>
+<status status="PASS" start="2024-02-01T14:05:08.008951" elapsed="0.254926"/>
+</kw>
+<kw name="Entao verificar se esta logado" owner="login">
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2024-02-01T14:05:08.291028" level="INFO">Element '/html/body/div[1]/main/div[1]/section[1]/form/div[3]/div/section' did not exist.</msg>
+<arg>${MINHA_CONTA}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2024-02-01T14:05:08.266356" elapsed="0.024672"/>
+</kw>
+<status status="PASS" start="2024-02-01T14:05:08.264893" elapsed="0.027186"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-01T14:05:08.294074" elapsed="2.489180"/>
+</kw>
+<status status="PASS" start="2024-02-01T14:05:08.293077" elapsed="2.490177"/>
+</kw>
+<status status="PASS" start="2024-02-01T14:04:50.228732" elapsed="20.564493"/>
+</test>
+<status status="PASS" start="2024-02-01T14:04:49.928928" elapsed="20.930042"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Preenchimento-Correto">Preenchimento-Correto</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-02-01T14:04:50.226175" level="WARN">Imported resource file 'c:\Users\v8\Desktop\caso-de-teste-kabum\resources\pages\cadastro.robot' is empty.</msg>
+</errors>
+</robot>
