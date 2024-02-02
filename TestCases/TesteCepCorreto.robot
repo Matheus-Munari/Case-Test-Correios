@@ -7,6 +7,8 @@ Test Teardown        Fechar Navegador
 Verificar se a funcionalidade Calcular CEP
     Quando preencher o formulário
     Sleep    1s
+    E rolar a tela
+    Sleep    1s
     E selecionar a opção "Calcular Frete"
     Sleep    1s
     Então verificar se o calculo foi feito

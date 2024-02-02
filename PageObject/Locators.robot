@@ -10,3 +10,4 @@ ${INPUT_LARGURA}                  //*[@id="largura"]
 ${INPUT_COMPRIMENTO}              //*[@id="comprimento"]
 ${BOTAO_CALCULAR}                 //*[@id="content"]/section/div/nav/form/div[2]/div[2]/div[2]/p
 ${BOTAO_CALCULAR_NOVAMENTE}       //*[@id="content"]/section/div/div[1]/div[2]/button
+${TEXTO_BAIXO}                    //*[@id="content"]/div[4]/div/h2

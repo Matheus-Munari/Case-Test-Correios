@@ -9,7 +9,8 @@ Quando preencher o formulário
     Input Text    ${INPUT_ALTURA}         50
     Input Text    ${INPUT_LARGURA}        50
     Input Text    ${INPUT_COMPRIMENTO}    50
-
+E rolar a tela
+    Scroll Element Into View        ${TEXTO_BAIXO}
 E selecionar a opção "Calcular Frete"
     Click Element    ${BOTAO_CALCULAR}
 
