@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-02T11:58:16.331472" rpa="false" schemaversion="5">
+<suite id="s1" name="TesteCepCorreto" source="c:\Users\v8\Downloads\Case-Test-Correios\TestCases\TesteCepCorreto.robot">
+<test id="s1-t1" name="Verificar se a funcionalidade Calcular CEP" line="7">
+<kw name="Dado que eu acesse o site dos correios" owner="setupTeardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-02T11:58:16.575848" level="INFO">Opening browser 'Chrome' to base url 'https://www.correios.com.br'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-02T11:58:16.574848" elapsed="22.564042"/>
+</kw>
+<status status="PASS" start="2024-02-02T11:58:16.572847" elapsed="22.566043"/>
+</kw>
+<kw name="Quando preencher o formulário" owner="PaginaInicial">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-02T11:58:39.140884" level="INFO">Typing text '01414001' into text field '//*[@id="origem"]'.</msg>
+<arg>${INPUT_ORIGEM}</arg>
+<arg>01414001</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-02T11:58:39.140884" elapsed="0.144329"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-02T11:58:39.286217" level="INFO">Typing text '04711904' into text field '//*[@id="destino"]'.</msg>
+<arg>${INPUT_DESTINO}</arg>
+<arg>04711904</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-02T11:58:39.285213" elapsed="0.152065"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-02T11:58:39.437891" level="INFO">Typing text '50' into text field '//*[@id="altura"]'.</msg>
+<arg>${INPUT_ALTURA}</arg>
+<arg>50</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-02T11:58:39.437278" elapsed="0.100594"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-02T11:58:39.538883" level="INFO">Typing text '50' into text field '//*[@id="largura"]'.</msg>
+<arg>${INPUT_LARGURA}</arg>
+<arg>50</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-02T11:58:39.537872" elapsed="0.091582"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-02T11:58:39.630463" level="INFO">Typing text '50' into text field '//*[@id="comprimento"]'.</msg>
+<arg>${INPUT_COMPRIMENTO}</arg>
+<arg>50</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-02T11:58:39.629454" elapsed="0.098605"/>
+</kw>
+<status status="PASS" start="2024-02-02T11:58:39.139884" elapsed="0.588686"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-02T11:58:40.730385" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-02T11:58:39.728570" elapsed="1.004410"/>
+</kw>
+<kw name="E selecionar a opção &quot;Calcular Frete&quot;" owner="PaginaInicial">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-02T11:58:40.737231" level="INFO">Clicking element '//*[@id="content"]/section/div/nav/form/div[2]/div[2]/div[2]/p'.</msg>
+<arg>${BOTAO_CALCULAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-02T11:58:40.735410" elapsed="0.084286"/>
+</kw>
+<status status="PASS" start="2024-02-02T11:58:40.734377" elapsed="0.086317"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-02T11:58:41.821575" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-02T11:58:40.821202" elapsed="1.000373"/>
+</kw>
+<kw name="Então verificar se o calculo foi feito" owner="PaginaInicial">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-02-02T11:58:41.858168" level="INFO">Element '//*[@id="content"]/section/div/div[1]/div[2]/button' is displayed.</msg>
+<arg>${BOTAO_CALCULAR_NOVAMENTE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-02T11:58:41.823097" elapsed="0.035071"/>
+</kw>
+<status status="PASS" start="2024-02-02T11:58:41.822085" elapsed="0.036083"/>
+</kw>
+<kw name="Fechar Navegador" owner="setupTeardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-02T11:58:41.860057" elapsed="2.236928"/>
+</kw>
+<status status="PASS" start="2024-02-02T11:58:41.859111" elapsed="2.237874"/>
+</kw>
+<status status="PASS" start="2024-02-02T11:58:16.571847" elapsed="27.526213"/>
+</test>
+<status status="PASS" start="2024-02-02T11:58:16.341066" elapsed="27.762023"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TesteCepCorreto">TesteCepCorreto</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
